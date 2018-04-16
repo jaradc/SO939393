@@ -1,0 +1,12 @@
+{% load static %}
+{% block content %}
+    <div class="container col-5">
+        <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Save" />
+        </form>
+    </div>
+{% endblock %}
+
+{% block custom_js %}<script>{% static 'myapp/custom.js' %}</script>{% endblock %}
